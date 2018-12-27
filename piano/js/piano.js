@@ -59,12 +59,20 @@ function keyDown(event) {
         return;
     }
 
-    if (event.key === 'Shift' || event.key === 'Alt') {
+    if (event.key === 'Shift') {
         event.preventDefault();
 
-        if (event.key === 'Shift') {
+        if (!piano.classList.contains('lower')) {
             SetMode(true, false)
-        } else {
+        }
+
+        return;
+    }
+
+    if (event.key === 'Alt') {
+        event.preventDefault();
+
+        if (!piano.classList.contains('higher')) {
             SetMode(false, true);
         }
 
