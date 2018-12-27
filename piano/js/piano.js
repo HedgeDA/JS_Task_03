@@ -62,8 +62,6 @@ function ketDown(event) {
     if (event.key === 'Shift' || event.key === 'Alt') {
         event.preventDefault();
 
-        console.log(event.code);
-
         if (event.key === 'Shift') {
             SetMode(true, false)
         } else {
