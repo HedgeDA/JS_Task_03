@@ -54,7 +54,7 @@ function SetMode(lower = false, higher = false) {
     setSounds();
 }
 
-function ketDown(event) {
+function keyDown(event) {
     if (!(event instanceof KeyboardEvent)) {
         return;
     }
@@ -124,5 +124,5 @@ for (let element of piano.getElementsByTagName('li')) {
 
 setSounds();
 
-document.addEventListener('keydown', ketDown);
+document.addEventListener('keydown', keyDown);
 document.addEventListener('keyup', ketUp);
