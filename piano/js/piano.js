@@ -33,18 +33,22 @@ function setSounds() {
 }
 
 function SetMode(lower = false, higher = false) {
-    let mode = 'set middle';
-
     if (lower) {
-        mode = 'set lower';
+        piano.classList.add('lower')
+    } else {
+        piano.classList.remove('lower')
     }
 
     if (higher) {
-        mode = 'set higher';
+        piano.classList.add('higher')
+    } else {
+        piano.classList.remove('higher')
     }
 
-    if (piano.className != mode) {
-        piano.className = mode;
+    if (!lower && !higher) {
+        piano.classList.add('middle')
+    } else {
+        piano.classList.remove('middle')
     }
 
     setSounds();
