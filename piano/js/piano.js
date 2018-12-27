@@ -20,7 +20,7 @@ const elements = [
     {
         sound: 'fifth.mp3',
         plays: false
-    }]
+    }];
 
 const piano = document.getElementsByClassName('set middle')[0];
 
