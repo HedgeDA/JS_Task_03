@@ -106,11 +106,20 @@ function ketUp(event) {
     }
 }
 
+function playSound(event) {
+     this.getElementsByTagName('audio')[0].src = this.getElementsByTagName('audio')[0].src;
+     this.getElementsByTagName('audio')[0].play();
+}
+
 let index = 0;
 for (let element of piano.getElementsByTagName('audio')) {
     elements[index].audio = element;
 
     index++;
+}
+
+for (let element of piano.getElementsByTagName('li')) {
+    element.addEventListener('click', playSound);
 }
 
 setSounds();
