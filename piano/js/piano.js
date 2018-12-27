@@ -77,10 +77,12 @@ function ketDown(event) {
         return;
     }
 
-    if (!elements[Number(event.code.replace('Digit', '')) - 1].audio.plays) {
-        elements[Number(event.code.replace('Digit', '')) - 1].audio.plays = true;
-        elements[Number(event.code.replace('Digit', '')) - 1].audio.src = elements[Number(event.code.replace('Digit', '')) - 1].audio.src;
-        elements[Number(event.code.replace('Digit', '')) - 1].audio.play();
+    let elementIndex = Number(event.code.replace('Digit', '')) - 1;
+
+    if (!elements[elementIndex].audio.plays) {
+        elements[elementIndex].audio.plays = true;
+        elements[elementIndex].audio.src = elements[elementIndex].audio.src;
+        elements[elementIndex].audio.play();
     }
 }
 
@@ -106,7 +108,7 @@ function ketUp(event) {
     }
 }
 
-function playSound(event) {
+function playSound() {
      this.getElementsByTagName('audio')[0].src = this.getElementsByTagName('audio')[0].src;
      this.getElementsByTagName('audio')[0].play();
 }
